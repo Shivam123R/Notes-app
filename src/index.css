@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Secular+One&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: 'Roboto',
+    sans-serif;
+  ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  margin-inline: auto;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex-flow: column wrap;
+  gap: 10px;
+}
+
+.navbar h1 {
+  font-size: 2.5rem;
+}
+
+.input,
+.input-field {
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  position: relative;
+}
+
+.input-field {
+  padding-left: 50px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.input-field::-webkit-input-placeholder {
+  color: rgb(179, 178, 178);
+}
+
+.label {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  font-size: 1.5rem;
+}
+
+.main,
+.search-window {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  transition: .5s ease-in-out;
+}
+.search-window{
+  display: none;
+}
+.task-created,
+.save-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  background-color: rgb(248, 248, 139);
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  transition: .5s ease-in-out;
+}
+
+.save-card {
+  background-color: rgb(116, 255, 116);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.task-created input,
+textarea,
+.save-card input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+}
+
+.task-created input,
+.save-card input {
+  height: 25px;
+  font-size: 1.4rem;
+  border: none;
+  font-weight: 550;
+  color: #1f1f1f;
+}
+
+.task-id:focus {
+  outline: none;
+}
+
+#task-save:focus {
+  outline: none;
+}
+
+.card-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.task-created input::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+  font-weight: 550;
+}
+
+.save-card input::-webkit-input-placeholder {
+  color: rgb(69, 69, 69);
+  font-weight: 550;
+}
+
+.task-created textarea,
+.save-card textarea {
+  font-size: 1.2rem;
+  border: none;
+  resize: none;
+  font-weight: 550;
+  color: #2b2b2b;
+}
+
+.task-created textarea::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.task-created textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-created textarea::-webkit-scrollbar-thumb {
+  width: 6px;
+  border-radius: 10px;
+}
+
+.save-card textarea::-webkit-input-placeholder {
+  color: rgb(69, 69, 69);
+}
+
+.save-card textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.save-card textarea::-webkit-scrollbar-thumb {
+  width: 6px;
+  border-radius: 10px;
+}
+
+.form-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.form-bottom button,
+.card-bottom button {
+  margin: 10px;
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.card-bottom button i {
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: .4 ease-in-out;
+  border-radius: 10px;
+}
+
+.card-bottom button i:hover {
+  background-color: black;
+  color: white;
+}
+
+.card-bottom span {
+  font-size: 1rem;
+  padding: 5px 20px;
+}
+
+.save-card .form-bottom button {
+  font-size: 1.4rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 550;
+  cursor: pointer;
+  color: white;
+}
+
+.save-card .form-bottom button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+@media screen and (max-width:800px) {
+  .main,.search-window {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width:801px) and (max-width:1200px) {
+  .main,.search-window {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
